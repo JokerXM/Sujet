@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="databaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="id of courses" />
+    </Key>
+    <Property Name="id of courses" Type="int" Nullable="false" />
+    <Property Name="name of courses" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="trainers" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="passedtrainers" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Certifications" Type="nchar" MaxLength="10" />
+    <Property Name="Validation of ECTS credits" Type="nchar" MaxLength="10" />
+    <Property Name="work experience" Type="nchar" MaxLength="10" />
+    <Property Name="questionmark" Type="nchar" MaxLength="10" />
+    <Property Name="finalmark" Type="nchar" MaxLength="10" />
+    <Property Name="ifpassed" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="level" Type="int" />
+    <Property Name="causees" Type="nchar" MaxLength="30" />
+    <Property Name="questioncontent" Type="nchar" MaxLength="90" />
+    <Property Name="ifask" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="10" />
+    <Property Name="Firstname" Type="nchar" MaxLength="10" />
+    <Property Name="Promotion during validation" Type="nchar" MaxLength="10" />
+    <Property Name="Current Promotion" Type="nchar" MaxLength="10" />
+    <Property Name="E-mail" Type="nchar" MaxLength="20" />
+    <Property Name="Campus" Type="nchar" MaxLength="10" />
+    <Property Name="Courses that he would teach" Type="nchar" MaxLength="10" />
+    <Property Name="Courses that he already teach" Type="nchar" MaxLength="10" />
+    <Property Name="The campus on which he has already given a course" Type="nchar" MaxLength="10" />
+    <Property Name="The campus on which he would give a course" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="databaseModelStoreContainer">
+    <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="notation" EntityType="Self.notation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

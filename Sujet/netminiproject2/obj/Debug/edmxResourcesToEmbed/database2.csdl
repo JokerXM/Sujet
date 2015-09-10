@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="databaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="id_of_courses" />
+    </Key>
+    <Property Name="id_of_courses" Type="Int32" Nullable="false" />
+    <Property Name="name_of_courses" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="trainers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="passedtrainers" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Certifications" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Validation_of_ECTS_credits" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="work_experience" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="questionmark" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="finalmark" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ifpassed" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="causees" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="questioncontent" Type="String" MaxLength="90" FixedLength="true" Unicode="true" />
+    <Property Name="ifask" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Firstname" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Promotion_during_validation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Current_Promotion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="E_mail" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Campus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Courses_that_he_would_teach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Courses_that_he_already_teach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="The_campus_on_which_he_has_already_given_a_course" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="The_campus_on_which_he_would_give_a_course" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="databaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Courses" EntityType="Self.Courses" />
+    <EntitySet Name="notation" EntityType="Self.notation" />
+    <EntitySet Name="Question" EntityType="Self.Question" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" />
+  </EntityContainer>
+</Schema>

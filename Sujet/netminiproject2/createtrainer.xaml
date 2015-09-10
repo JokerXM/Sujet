@@ -1,0 +1,44 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:netminiproject2" x:Class="netminiproject2.createtrainer" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="createtrainer">
+
+    <Grid Margin="0,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Height="23" Width="75" Margin="46,10,179,257" Grid.RowSpan="2" ><Run Language="zh-cn" Text="id"/></TextBlock>
+        <TextBox x:Name="trainerid" Height="23" Width="120" Margin="126,10,54,257" Grid.RowSpan="2" />
+        <TextBlock Height="23" Width="75" Margin="46,33,179,234" Grid.RowSpan="2"><Run Language="zh-cn" Text="name"/></TextBlock>
+        <TextBox Name="trainername"  Height="23" Width="120" Margin="126,33,54,234" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Width="75" Margin="46,61,179,206" Grid.RowSpan="2"><Run Language="zh-cn" Text="firstname"/></TextBlock>
+        <TextBox Name="trainerfirstname"  Height="23" Width="120" Margin="126,56,54,211" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Width="75" Margin="46,84,179,183" Grid.RowSpan="2"><Run Language="zh-cn" Text="validation"/></TextBlock>
+        <TextBox Name="trainervalidation"  Height="23" Width="120" Margin="126,79,54,188" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Width="75" Margin="46,107,179,160" Grid.RowSpan="2"><Run Language="zh-cn" Text="Promotion"/></TextBlock>
+        <TextBox Name="trainerPromotion"  Height="23" Width="120" Margin="126,102,54,165" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Width="75" Margin="46,130,179,137" Grid.RowSpan="2"><Run Language="zh-cn" Text="E-mail"/></TextBlock>
+        <TextBox Name="trainermail"  Height="23" Width="120" Margin="126,125,54,142" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Width="75" Margin="46,153,179,114" Grid.RowSpan="2"><Run Language="zh-cn" Text="Campus"/></TextBlock>
+        <TextBox Name="Campus"  Height="23" Width="120" Margin="126,148,54,119" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Margin="10,176,169,91" Grid.RowSpan="2"><Run Language="zh-cn" Text="caurse already teach"/></TextBlock>
+        <TextBox Name="alcourse"  Height="23" Width="120" Margin="126,171,54,96" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Margin="10,194,179,73" Grid.RowSpan="2"><Run Language="zh-cn" Text="caurse have teached"/></TextBlock>
+        <TextBox Name="hacourse"  Height="23" Width="120" Margin="126,194,54,73" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Margin="5,217,174,50" Grid.RowSpan="2"><Run Language="zh-cn" Text="campus already teached"/></TextBlock>
+        <TextBox Name="alcampus"  Height="23" Width="120" Margin="126,217,54,50" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+        <TextBlock Height="23" Margin="15,240,174,27" Grid.RowSpan="2"><Run Language="zh-cn" Text="campus would teach"/></TextBlock>
+        <TextBox Name="wouldcampus"  Height="23" Width="120" Margin="126,240,54,27" TextChanged="trainername_TextChanged" Grid.RowSpan="2"/>
+
+
+
+
+        <Button Content="submit" HorizontalAlignment="Left" Margin="111,270,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" Grid.RowSpan="2" Height="20"/>
+    </Grid>
+</Page>

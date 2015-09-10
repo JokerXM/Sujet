@@ -1,0 +1,21 @@
+﻿<Window x:Class="netminiproject2.createquestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="createquestion" Height="300" Width="300">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="81,49,0,0" TextWrapping="Wrap" Text="question id" VerticalAlignment="Top"/>
+        <TextBox x:Name="questionid" HorizontalAlignment="Left" Height="23" Margin="162,48,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,76,0,0" TextWrapping="Wrap" Text="Choose question type" VerticalAlignment="Top"/>
+        <RadioButton x:Name="important" Content="important" HorizontalAlignment="Left" Margin="186,117,0,0" VerticalAlignment="Top" Checked="important_Checked" Tag=""/>
+        <RadioButton x:Name="bonus" Content="bonus" HorizontalAlignment="Left" Margin="186,97,0,0" VerticalAlignment="Top" Checked="bonus_Checked" Tag=""/>
+        <RadioButton x:Name="common" Content="common" HorizontalAlignment="Left" Margin="186,77,0,0" VerticalAlignment="Top" Checked="common_Checked" Tag=""/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,184,0,0" TextWrapping="Wrap" Text="question content" VerticalAlignment="Top"/>
+        <TextBox x:Name="questioncontent" HorizontalAlignment="Left" Height="34" Margin="69,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="170"/>
+        <Button Content="save " HorizontalAlignment="Left" Margin="176,239,0,0" VerticalAlignment="Top" Width="77" Background="GreenYellow" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="90,142,0,0" TextWrapping="Wrap" Text="course" VerticalAlignment="Top"/>
+        <TextBox x:Name="course" HorizontalAlignment="Left" Height="23" Margin="162,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+
+
+    </Grid>
+</Window>
